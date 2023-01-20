@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def main():
+def add(a, b):
     from add_0 import add
 
     a = 1
@@ -7,4 +7,5 @@ def main():
     result = add(a, b)
     print("{} + {} = {}".format(a, b, result))
 
-main()
+add()
+
