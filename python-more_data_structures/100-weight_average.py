@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 def weight_average(my_list=[]):
-    sum = 0
-    for sub in my_list:
-        for i in sub:
-            sum = sum + i
-        res = sum / len(my_list)
-    return res
+    if my_list == "":
+        return 0
+    total_weight = sum(weight for score, weight in my_list)
+    weighted_sum = sum(score * weight for score, weight in my_list)
+    return weighted_sum / total_weight
