@@ -6,4 +6,3 @@ class Square:
     """represent square"""
 
     pass
-
