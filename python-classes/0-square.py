@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-class Square:
-    """this function does nothing"""
+"""this function does nothing"""
 
+
+class Square:
+    """represent square"""
 
     pass
 
