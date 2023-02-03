@@ -6,8 +6,8 @@ my name is John Smith
 >>> say_my_name("Walter", "White")
 my name is Walter White
 
->>> say_my_name("Bob", "Lenon")
-my name is Bob Lenon
+>>> say_my_name("Bob"," ")
+my name is Bob
 
 >>> say_my_name(["John", "Smith", 5, 6.5])
 Traceback (most recent call last):
@@ -27,3 +27,7 @@ TypeError: first_name must be a string
 
 >>> say_my_name("ahmed", "White")
 my name is ahmed White
+
+>>> say_my_name({"John": 3, "Smith" : 3})
+Traceback (most recent call last):
+TypeError: first_name must be a string
