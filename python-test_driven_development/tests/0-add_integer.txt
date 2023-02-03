@@ -1,11 +1,11 @@
-add_integer = __import__('0-add_integer').add_integer
 
->>> add_integer(1, 2)
-Traceback (most recent call last):
-NameError: name 'add_integer' is not defined
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
 
 >>> add_integer(1, 2)
 3
+
 >>> add_integer(2)
 100
 
