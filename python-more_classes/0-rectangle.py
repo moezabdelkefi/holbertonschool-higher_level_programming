@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" 
+"""
 thi is a class ractangle
 """
 
