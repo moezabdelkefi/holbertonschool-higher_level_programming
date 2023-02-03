@@ -11,6 +11,10 @@ raises:
 """
 
 def print_square(size):
+    """ 
+print a square with the character # 
+    """
+
     if size == int:
         raise TypeError("size must be an integer")
     if size < 0:
