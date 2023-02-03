@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 
-""" define a class ractangle"""
+""" 
+thi is a class ractangle
+"""
 
 class Rectangle:
-
-    """represent a rectangle"""
-
+    """
+    represent a rectangle
+    """
     pass
