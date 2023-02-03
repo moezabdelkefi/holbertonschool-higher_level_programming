@@ -2,19 +2,15 @@
 
 """define a function that divides all elements of a matrix"""
 
-"""
-raises:
+
+def print_square(size):
+    """Print a square with the # character.
+    raises:
     TypeError: size must be an integer
     ValueError: size must be >= 0
     TypeError: size must be an integer
 
-"""
-
-def print_square(size):
-    """ 
-print a square with the character # 
     """
-
     if size == int:
         raise TypeError("size must be an integer")
     if size < 0:
