@@ -7,6 +7,7 @@ Class: The class is a user-defined data structure that binds the data members an
                                                             # Statement
 
 Object: An object is an instance of a class. It is a collection of attributes (variables) and methods. We use the object of a class to perform actions.
+
                                                         obj = ClassName()
                                                         print(obj.atrr)
 
