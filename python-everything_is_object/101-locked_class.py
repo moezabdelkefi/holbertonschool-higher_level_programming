@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-
-""" define a class with no class or object attribute"""
+""" define a LockedClass"""
 
 
 class LockedClass:
-
-
-    raise AttributeError(" 'LockedClass' object has no attribute 'last_name'")
+    """
+    prevents the user from dynamically creating new instance attributes, 
+    except if the new instance attribute is called first_name
+    """
+    __slots__ = ["first_name"]
