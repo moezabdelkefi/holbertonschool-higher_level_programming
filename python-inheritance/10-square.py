@@ -20,6 +20,8 @@ class Rectangle(BaseGeometry):
     """define a class rectangle"""
 
     def __init__(self, width, height):
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
         if type(height) != int:
@@ -35,11 +37,12 @@ class Rectangle(BaseGeometry):
     def __repr(self):
         return self.__str__()
 
+
 class Square(Rectangle):
     """ a class Square that inherits from Rectangle"""
 
-
     def __init__(self, size):
+        self.integer_validator("size", size)
         self.__size = size
 
     def area(self):
