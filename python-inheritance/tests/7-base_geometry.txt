@@ -1,1 +1,33 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BaseGeometry(None)
+Traceback (most recent call last):
+TypeError: BaseGeometry() takes no arguments
+
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+NameError: name 'bg' is not defined
+
+>>> bg.integer_validator("age")
+Traceback (most recent call last):
+NameError: name 'bg' is not defined
+
+>>> bg.integer_validator("age", 1)
+Traceback (most recent call last):
+NameError: name 'bg' is not defined
+
+>>> bg.integer_validator("age", -4)
+Traceback (most recent call last):
+NameError: name 'bg' is not defined
+
+>>> bg.integer_validator("age", 4)
+Traceback (most recent call last):
+NameError: name 'bg' is not defined
+
+>>> bg.integer_validator("age", (4))
+Traceback (most recent call last):
+NameError: name 'bg' is not defined
+
+>>> bg.integer_validator("str", True)
+Traceback (most recent call last):
+NameError: name 'bg' is not defined
