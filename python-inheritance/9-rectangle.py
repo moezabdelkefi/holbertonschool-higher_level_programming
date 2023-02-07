@@ -28,7 +28,6 @@ class Rectangle(BaseGeometry):
             raise TypeError("height must be an integer")
         return None
 
-
     def area(self):
         return self.__height * self.__width
 
