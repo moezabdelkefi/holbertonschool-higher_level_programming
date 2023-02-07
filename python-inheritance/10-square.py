@@ -38,7 +38,7 @@ class Rectangle(BaseGeometry):
         return self.__str__()
 
 
-class Square(Rectangle):
+class Square(BaseGeometry):
     """ a class Square that inherits from Rectangle"""
 
     def __init__(self, size):
