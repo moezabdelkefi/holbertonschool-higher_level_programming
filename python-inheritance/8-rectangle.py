@@ -16,10 +16,11 @@ class BaseGeometry:
             raise ValueError(f"{name} must be greater than 0")
 
 class Rectangle(BaseGeometry):
+    """define a class rectangle"""
+
     def __init__(self, width, height):
         self.__width = width
         self.__height = height
         if type(height) != int:
             raise TypeError("height must be an integer")
         return None
-
