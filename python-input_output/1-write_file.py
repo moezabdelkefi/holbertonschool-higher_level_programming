@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""define a function write_file"""
+"""this is the declaration of the module"""
 
 
 def write_file(filename="", text=""):
-    """ return length of the text"""
-    with open(filename, "r", encoding="UTF8") as myfile:
-        myfile.write(text)
-        return len(text)
+    """this Module open the file and write in it"""
+    with open(filename, 'w', encoding='utf8') as f:
+        f.write(text)
+    f.close()
+    return len(text)
