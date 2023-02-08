@@ -5,4 +5,5 @@
 def write_file(filename="", text=""):
     """ return length of the text"""
     with open(filename, "r", encoding="UTF8") as myfile:
-        return len(text)
+        for i in text:
+            return len(text)
