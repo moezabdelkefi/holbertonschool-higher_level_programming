@@ -1,36 +1,29 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
->>> bg.integer_validator("invalid number", "number")
-Traceback (most recent call last):
-NameError: name 'bg' is not defined
+>>> bg = BaseGeometry()
 
->>> bg.integer_validator("another invalid", True)
-Traceback (most recent call last):
-NameError: name 'bg' is not defined
 
->>> bg.integer_validator("invalid tuple", (1,))
+>>> bg.integer_validator("my_int", (1,))
 Traceback (most recent call last):
-NameError: name 'bg' is not defined
+TypeError: my_int must be an integer
 
->>> bg.integer_validator("and another", [3])
+>>> bg.integer_validator("my_int", [3])
 Traceback (most recent call last):
-NameError: name 'bg' is not defined
+TypeError: my_int must be an integer
 
->>> bg.integer_validator("more invalid testing", {3, 4})
+>>> bg.integer_validator("my_int", {3, 4})
 Traceback (most recent call last):
-NameError: name 'bg' is not defined
+TypeError: my_int must be an integer
 
->>> bg.integer_validator("absolutely every possible invalid", None)
+>>> bg.integer_validator("my_int", None)
 Traceback (most recent call last):
-NameError: name 'bg' is not defined
+TypeError: my_int must be an integer
 
-And if ``value`` is an integer, but less than or equal to zero, a ValueError
-is raised.
 
->>> bg.integer_validator("invalid int", -1)
+>>> bg.integer_validator("my_int", -1)
 Traceback (most recent call last):
-NameError: name 'bg' is not defined
+ValueError: my_int must be greater than 0
 
->>> bg.integer_validator("invalid int", 0)
+>>> bg.integer_validator("my_int", 0)
 Traceback (most recent call last):
-NameError: name 'bg' is not defined
+ValueError: my_int must be greater than 0
