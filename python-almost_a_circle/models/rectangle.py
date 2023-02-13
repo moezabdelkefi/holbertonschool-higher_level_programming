@@ -60,7 +60,6 @@ class Rectangle(Base):
         ValueError: If value is <= 0 or < 0 depending on the attribute.
         """
 
-
         if type(value) != int:
             raise TypeError(f"{name} must be an integer")
 
