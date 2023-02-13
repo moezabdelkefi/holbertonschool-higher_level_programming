@@ -82,3 +82,8 @@ class Rectangle(Base):
             print("#" * self.__width)
         if self.__width == 0:
             print()
+
+    def __str__(self):
+        """define __str__ method"""
+
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y}- {self.width}/{self.height}"
