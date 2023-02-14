@@ -86,8 +86,7 @@ class Rectangle(Base):
     def __str__(self):
         """define __str__ method"""
 
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} -\
-            {self.width}/{self.height}"
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
     def display(self):
         """ print in stdout the Rectangle instance with the character #"""
@@ -117,7 +116,7 @@ class Rectangle(Base):
             self.y = args[4]
 
     def to_dictionary(self):
-        """eturns the dictionary representation of a Rectangle"""
+        """returns the dictionary representation of a Rectangle"""
 
         return {'id': self.id,
                 'width': self.width,
