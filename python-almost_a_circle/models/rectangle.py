@@ -60,7 +60,7 @@ class Rectangle(Base):
         ValueError: If value is <= 0 or < 0 depending on the attribute.
         """
 
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError(f"{name} must be an integer")
 
         if name == "width" or name == "height":
@@ -95,7 +95,7 @@ class Rectangle(Base):
             print()
         for j in range(self.height):
             print(" " * self.x + "#" * self.width)
-    
+
     def update(self, *args):
         """assigns an argument to each attribute
         pass a variable number of arguments to a function
@@ -110,4 +110,3 @@ class Rectangle(Base):
             self.x = args[3]
         if len(args) >= 5:
             self.y = args[4]
-    
