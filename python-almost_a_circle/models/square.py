@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ define a class square that inherits from Rectangle"""
+
+
 from models.rectangle import Rectangle
 
 class Square(Rectangle):
