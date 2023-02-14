@@ -97,6 +97,9 @@ class Rectangle(Base):
             print(" " * self.x + "#" * self.width)
     
     def update(self, *args):
+        """assigns an argument to each attribute
+        pass a variable number of arguments to a function
+        """
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
