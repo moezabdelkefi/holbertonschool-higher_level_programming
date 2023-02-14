@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """define a class base"""
 
+import json
 
 
 class Base:
@@ -22,4 +23,4 @@ class Base:
         if list_dictionaries is None:
             return "[]"
         else:
-            return str(list_dictionaries)
+            return json.dumps(list_dictionaries)
