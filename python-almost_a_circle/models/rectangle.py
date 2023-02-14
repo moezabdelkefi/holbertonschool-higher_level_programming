@@ -101,10 +101,10 @@ class Rectangle(Base):
         """assigns an argument to each attribute
         pass a variable number of arguments to a function
         """
+
         if len(args) == 0:
             for key, value in kwargs.items():
-                   self.__setattr__(key, value)
-
+                self.__setattr__(key, value)
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
