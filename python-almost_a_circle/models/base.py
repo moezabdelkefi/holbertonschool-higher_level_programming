@@ -17,7 +17,7 @@ class Base:
             self.id = Base.__nb_objects
 
     @staticmethod
-    def to_json_string(list_dictionaries):
+    def to_json_string(list_dictionaries):# convert the list of dictionaries to a JSON string
         """ returns the JSON string representation of list_dictionaries"""
 
         if list_dictionaries is None:
@@ -38,3 +38,10 @@ class Base:
 
         with open(file_name, "w") as f:
             f.write(cls.to_json_string(objects))
+
+    def from_json_string(json_string):
+        if json_string is None or []:
+            return []
+        else:
+            return json_string
+    
