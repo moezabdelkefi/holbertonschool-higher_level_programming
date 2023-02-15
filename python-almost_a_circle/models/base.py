@@ -40,6 +40,7 @@ class Base:
             f.write(cls.to_json_string(objects))
 
     def from_json_string(json_string):
+        """returns the list of the JSON string representation json_string"""
         if json_string is None or []:
             return []
         else:
