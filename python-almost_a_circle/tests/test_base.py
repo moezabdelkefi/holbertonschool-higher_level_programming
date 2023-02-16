@@ -34,10 +34,10 @@ class TestBase(unittest.TestCase):
         dict = [{'id': 89, 'x': 0, 'y': 0, 'width': 1, 'height': 1}]
         self.assertEqual(Base.from_json_string('[{"id": 89, "x": 0, "y": 0, "width": 1, "height": 1}]'), dict)
     
-    def test_rectangle(self):
+    def test_rectangle_1_2_exists(self):
         r1 = Rectangle(1, 2)
         self.assertIsInstance(r1, Rectangle)
 
-    def test_rectangle_2(self):
+    def test_rectangle_1_2_3_exists(self):
         r2 = Rectangle(1, 2, 3)
         self.assertIsInstance(r2, Rectangle)
