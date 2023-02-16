@@ -12,4 +12,8 @@ class TestBase(unittest.TestCase):
         b1 = Base()
         b2 = Base()
         self.assertEqual(b1.id, b2.id - 1)
-    
+
+    def saving_the_id(self):
+        b1 = Base(98)
+        self.assertEqual(b1, Base)
+        
