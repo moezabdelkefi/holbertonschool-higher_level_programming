@@ -1,12 +1,35 @@
 import unittest
-
 from models.base import Base
-class mytestcases(unittest.TestCase):
+from models.rectangle import Rectangle
 
-    def testone(self):
+class TestBase(unittest.TestCase):
+    def test_id_increment(self):
+        b1 = Base()
+        b2 = Base()
+        self.assertEqual(b1.id, 1)
+        self.assertEqual(b2.id, 2)
+        
+    def test_id_increment_by_one(self):
         b1 = Base()
         b2 = Base()
         self.assertEqual(b1.id, b2.id - 1)
         
-    if __name__ == "__main__":
-        unittest.main()
+    def test_save_passed_id(self):
+        b1 = Base(89)
+        self.assertEqual(b1.id, 89)
+        
+    def test_to_json_string_none(self):
+        self.assertEqual(Base.to_json_string(None), "[]")
+        
+    def test_to_json_string_empty_list(self):
+        self.assertEqual(Base.to_json_string([]), "[]")
+        
+    def test_from_json_string_none(self):
+        self.assertEqual(Base.from_json_string(None), [])
+        
+    def test_from_json_string_empty_list(self):
+        self.assertEqual(Base.from_json_string("[]"), [])
+        
+    def test_from_json_string_one_dict(self):
+        expected_output = [{'id': 89, 'x': 0, 'y': 0, 'width': 1, 'height': 1}]
+        self.assertEqual(Base.from_json_string('[{"id": 89, "x": 0, "y": 0, "width": 1, "height": 1}]'), expected_output)
