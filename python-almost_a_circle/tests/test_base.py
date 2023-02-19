@@ -1,5 +1,6 @@
 import unittest
 from models.base import Base
+from models.rectangle import Rectangle
 
 class TestBase(unittest.TestCase):
     def test_id_increment(self):
@@ -31,3 +32,12 @@ class TestBase(unittest.TestCase):
     def test_from_json_string_one_dict(self):
         expected_output = [{'id': 89, 'x': 0, 'y': 0, 'width': 1, 'height': 1}]
         self.assertEqual(Base.from_json_string('[{"id": 89, "x": 0, "y": 0, "width": 1, "height": 1}]'), expected_output)
+
+class TestRectangle(unittest.TestCase):
+    def test_rectangle_1(self):
+        r = Rectangle(1, 2)
+        self.assertIsInstance(r, Rectangle)
+
+    def test_rectangle_2(self):
+        r = Rectangle(1, 2, 3)
+        self.assertIsInstance(r, Rectangle)
