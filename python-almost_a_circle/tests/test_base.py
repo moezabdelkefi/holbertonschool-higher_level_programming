@@ -12,7 +12,22 @@ class TestBase(unittest.TestCase):
         b1 = Base()
         b2 = Base()
         self.assertEqual(b1.id, b2.id - 1)
-
-    def test_saving_the_id(self):
-        b1 = Base(98)
-        self.assertEqual(b1, Base)
+    def test_save_passed_id(self):
+        b1 = Base(89)
+        self.assertEqual(b1.id, 89)
+        
+    def test_to_json_string_none(self):
+        self.assertEqual(Base.to_json_string(None), "[]")
+        
+    def test_to_json_string_empty_list(self):
+        self.assertEqual(Base.to_json_string([]), "[]")
+        
+    def test_from_json_string_none(self):
+        self.assertEqual(Base.from_json_string(None), [])
+        
+    def test_from_json_string_empty_list(self):
+        self.assertEqual(Base.from_json_string("[]"), [])
+        
+    def test_from_json_string_one_dict(self):
+        expected_output = [{'id': 89, 'x': 0, 'y': 0, 'width': 1, 'height': 1}]
+        self.assertEqual(Base.from_json_string('[{"id": 89, "x": 0, "y": 0, "width": 1, "height": 1}]'), expected_output)
