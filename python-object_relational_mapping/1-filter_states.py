@@ -4,16 +4,17 @@
 import MySQLdb
 import sys
 
-username = sys.argv[1]
-password = sys.argv[2]
-database = sys.argv[3]
-
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        user = sys.argv[1]
+    else:
+        print("Error: no user provided.")
 
 db = MySQLdb.connect(host='localhost',
                      port=3306,
-                     user=username,
-                     passwd=password,
-                     db=database)
+                     user=sys.argv[1],
+                     passwd=sys.argv[2],
+                     db=sys.argv[3])
 
 cursor = db.cursor()
 
