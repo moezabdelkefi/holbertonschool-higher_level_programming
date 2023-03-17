@@ -3,27 +3,21 @@
 import MySQLdb
 import sys
 
-
-username = sys.argv[1]
-password = sys.argv[2]
-database = sys.argv[3]
-state_name = sys.argv[4]
-
-db = MySQLdb.connect(host='localhost',
-                     port=3306, user=username,
-                     passwd=password,
-                     db=database)
-
-cursor = db.cursor()
-
-query = "SELECT * FROM states WHERE name=%s ORDER BY id ASC"
-
-cursor.execute(query, (state_name,))
-
-rows = cursor.fetchall()
-
-for row in rows:
-    print(row)
-
-cursor.close()
-db.close()
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        user = sys.argv[1]
+    else:
+        print("Error: no user provided.")
+    db = MySQLdb.connect(host="localhost",
+                         port=3306,
+                         user=sys.argv[1],
+                         passwd=sys.argv[2],
+                         db=sys.argv[3])
+    db_s = sys.argv[4]
+    c = db.cursor()
+    c.execute("SELECT * FROM states WHERE name LIKE %s\
+              ORDER BY states.id", (db_s, ))
+    for state in c.fetchall():
+        print(state)
+    c.close()
+    db.close()
