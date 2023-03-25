@@ -11,6 +11,7 @@ engine = create_engine('mysql://localhost:3306')
 
 Base = declarative_base()
 
+
 class State(Base):
     """
     Write a script that deletes all State objects with a
@@ -19,5 +20,6 @@ class State(Base):
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
+
 
 Base.metadata.create_all(engine)
