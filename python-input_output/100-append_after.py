@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""define a function append_after"""
+
+
 def append_after(filename="", search_string="", new_string=""):
     """Inserts a line of text after each line containing a specific string.
 
