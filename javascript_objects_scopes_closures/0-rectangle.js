@@ -1,14 +1,10 @@
 #!/usr/bin/node
 class Rectangle {
     constructor() {
-
     }
-
-toString() {
-    return `[Class: Rectangle]`;
   }
-}
-
-const rect = new Rectangle();
-console.log(rect); // output: Rectangle {}
-console.log(rect.toString());
+  
+  const r1 = new Rectangle();
+  console.log(r1);
+  console.log(Object.prototype.toString.call(r1));
+  
