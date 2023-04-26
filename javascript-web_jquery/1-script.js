@@ -1,0 +1,1 @@
+$('header, footer').css('color', '#FF0000');
